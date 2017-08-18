@@ -1,6 +1,6 @@
 CREATE DATABASE customers;
 \c customers; 
--- \c in postgres like USE in mysql
+-- \c in postgres like USE in mysql ***
 
 DROP TABLE IF EXISTS Resa;
 DROP TABLE IF EXISTS Login;
