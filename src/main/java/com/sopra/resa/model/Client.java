@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-@Entity
+@Entity 
 @Table(name="Customer")
 @NamedQuery(name="Client.findByName",
             query="SELECT c FROM Client c WHERE c.nom = :pnom")
