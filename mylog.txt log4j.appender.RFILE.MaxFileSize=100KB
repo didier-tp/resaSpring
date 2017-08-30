@@ -4,3 +4,15 @@
 2017-08-18 11:55:23,136 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
   Détail : La clé « (username)=(alex-therieur) » existe déjà.
 2017-08-18 11:55:23,136 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 08:59:52,144 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 08:59:52,168 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 09:02:50,057 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 09:02:50,062 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 09:04:02,987 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 09:04:02,991 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 09:04:30,956 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 09:04:30,959 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]

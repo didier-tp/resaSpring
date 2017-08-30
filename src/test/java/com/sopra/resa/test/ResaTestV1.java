@@ -1,6 +1,7 @@
 package com.sopra.resa.test;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.sopra.resa.model.Client;
 import com.sopra.resa.service.ServiceClient;
 
-import junit.framework.Assert;
+
 
 public class ResaTestV1 {
 	
