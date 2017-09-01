@@ -25,11 +25,11 @@ public class Vol {
 	@Embedded
 	@AssociationOverrides({
 	 @AssociationOverride(name="localite",
-			              joinColumns={@JoinColumn(name="refLocDepart")})
+	     joinColumns={@JoinColumn(name="refLocDepart")})
 	})
 	@AttributeOverrides({
 	  @AttributeOverride(name="date",	
-			             column=@Column(name="dateDepart"))
+			         column=@Column(name="dateDepart"))
 	})
 	private Phase depart;
 	
