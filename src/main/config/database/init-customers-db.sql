@@ -1,11 +1,28 @@
 -- CREATE DATABASE customers; already done
 
 DROP TABLE IF EXISTS Resa;
+
+DROP TABLE IF EXISTS Vol;
+DROP TABLE IF EXISTS Localite;
+
 DROP TABLE IF EXISTS Login;
 DROP TABLE IF EXISTS Customer;
 DROP TABLE IF EXISTS Address;
 
 -- SERIAL or BIGSERIAL postgres TYPE are auto_increment Integer
+
+CREATE TABLE Localite
+	(id SERIAL primary key ,
+	 ville VARCHAR(12),
+     aeroport VARCHAR(32));
+     
+CREATE TABLE Vol
+	(num SERIAL primary key ,
+	 prix double precision,
+	 refLocDepart integer,
+     dateDepart VARCHAR(32),
+     refLocArrivee integer,
+     dateArrivee VARCHAR(32));     
 
 CREATE TABLE Address
 	(id SERIAL primary key ,
@@ -59,7 +76,22 @@ INSERT INTO Login(id , username , password)
 INSERT INTO Resa(idClient , dateResa , comment) 
    VALUES ( 1 , '2017-08-15' , 'resa aaa' ) ,
           ( 1 , '2017-08-17' , 'resa bbb' ) ;
+          
+   
+INSERT INTO Localite(id , ville , aeroport) 
+   VALUES ( 1 , 'Paris' , 'Paris-Orly' ),
+          ( 2 , 'Paris' , 'Paris-Roissy' ),
+          ( 3 , 'Toulouse' , 'Toulouse-Blagnac' ),
+          ( 4 , 'Nice' , 'Nice-' );   
+          
+INSERT INTO Vol(num , prix , refLocDepart , dateDepart,refLocArrivee,dateArrivee) 
+   VALUES ( 1 , 100.0 , 1 ,  '2017-09-20' , 3 , '2017-09-20' ),
+          ( 2 , 110.0 , 3 ,  '2017-09-21' , 1 , '2017-09-21' ),
+          ( 3 , 80.0 , 1 ,  '2017-09-20' , 4 , '2017-09-20' ),
+          ( 4 , 70.0 , 4 ,  '2017-09-21' , 1 , '2017-09-21' );            
 
+select * from Localite;
+select * from Vol;          
 
 select * from Address;
 select * from Customer;

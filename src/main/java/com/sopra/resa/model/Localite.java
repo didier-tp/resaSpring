@@ -1,7 +1,16 @@
 package com.sopra.resa.model;
 
-//@Entity, ...
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Localite")
 public class Localite {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String ville;
 	private String aeroport;
@@ -42,6 +51,15 @@ public class Localite {
 	public void setAeroport(String aeroport) {
 		this.aeroport = aeroport;
 	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Localite [id=" + id + ", ville=" + ville + ", aeroport=" + aeroport + "]";
+	}
+	
 	
 	
 }

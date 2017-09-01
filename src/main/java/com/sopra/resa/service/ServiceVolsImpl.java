@@ -4,27 +4,40 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.sopra.resa.dao.DaoLocalite;
+import com.sopra.resa.dao.DaoVols;
 import com.sopra.resa.model.Localite;
 import com.sopra.resa.model.Vol;
 //version simulée sans base (temporairement)
 @Service
-//@Transactional
+@Transactional
 public class ServiceVolsImpl implements ServiceVols {
+	
+	@Autowired
+	private DaoLocalite daoLocalite;
+	
+	@Autowired
+	private DaoVols daoVols;
 
 	@Override
 	public List<Localite> rechercherListeLocalites() {
-		List<Localite> listeLoc = new ArrayList<Localite>();
+		return daoLocalite.findAll();
+		/* List<Localite> listeLoc = new ArrayList<Localite>();
 		listeLoc.add(new Localite(1L,"Paris","Orly"));
 		listeLoc.add(new Localite(2L,"Paris","Roissy"));
 		listeLoc.add(new Localite(3L,"Toulouse","Toulouse"));
 		listeLoc.add(new Localite(4L,"Nice","Nice"));
-		return listeLoc;
+		return listeLoc; */
 	}
 
 	@Override
 	public List<Vol> rechercherVolsAuDepart(String ville, Date date) {
+		return daoVols.findVolsByDeparture(ville); //date a prendre en compte dans future version
+		/*
 		List<Vol> listeVols = new ArrayList<Vol>();
 		switch(ville){
 		case "Paris":
@@ -43,7 +56,7 @@ public class ServiceVolsImpl implements ServiceVols {
 			listeVols.add(new Vol(23L,370.5,null,null));
 			break;
 		}
-		return listeVols;
+		return listeVols;*/
 	}
 
 }

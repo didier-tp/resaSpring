@@ -1,11 +1,47 @@
 package com.sopra.resa.model;
 
-//@Entity
+import javax.persistence.AssociationOverride;
+import javax.persistence.AssociationOverrides;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Vol")
 public class Vol {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long num;
+	
 	private Double prix;
+	
+	@Embedded
+	@AssociationOverrides({
+	 @AssociationOverride(name="localite",
+			              joinColumns={@JoinColumn(name="refLocDepart")})
+	})
+	@AttributeOverrides({
+	  @AttributeOverride(name="date",	
+			             column=@Column(name="dateDepart"))
+	})
 	private Phase depart;
+	
+	@Embedded
+	@AssociationOverrides({
+	 @AssociationOverride(name="localite",
+			              joinColumns={@JoinColumn(name="refLocArrivee")})
+	})
+	@AttributeOverrides({
+	  @AttributeOverride(name="date",	
+			             column=@Column(name="dateArrivee"))
+	})
 	private Phase arrivee;
 	
 	
@@ -42,6 +78,10 @@ public class Vol {
 	}
 	public void setArrivee(Phase arrivee) {
 		this.arrivee = arrivee;
+	}
+	@Override
+	public String toString() {
+		return "Vol [num=" + num + ", prix=" + prix + ", depart=" + depart + ", arrivee=" + arrivee + "]";
 	}
 	
 	
