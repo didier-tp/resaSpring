@@ -45,13 +45,16 @@ FOREIGN KEY(idClient) REFERENCES Customer(id);
 
 
 INSERT INTO Address(numberAndStreet , zip , town , country) 
-   VALUES ('12 rue elle ' , '75000' , 'Paris' , 'France');
+   VALUES ('12 rue elle ' , '75000' , 'Paris' , 'France'),
+          ('12 rue azerty ' , '69000' , 'Lyon' , 'France');
 
 INSERT INTO Customer(firstName , lastName , addressId ,email , phoneNumber) 
-   VALUES ('alex' , 'Therieur' , 1 , 'alex-therieur@iciOulaBas.fr' , '0102030405');
+   VALUES ('alex' , 'Therieur' , 1 , 'alex-therieur@iciOulaBas.fr' , '0102030405'),
+          ('alain' , 'Therieur' , 2 , 'alain-therieur@xyz.fr' , '0123456789');
    
 INSERT INTO Login(id , username , password) 
-   VALUES ( 1 , 'alex-therieur' , 'pwd007' );
+   VALUES ( 1 , 'alex-therieur' , 'pwd007' ),
+          ( 2 , 'alain-therieur' , 'pwd007' );
    
 INSERT INTO Resa(idClient , dateResa , comment) 
    VALUES ( 1 , '2017-08-15' , 'resa aaa' ) ,

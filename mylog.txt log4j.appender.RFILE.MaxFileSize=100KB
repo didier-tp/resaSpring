@@ -16,3 +16,12 @@
 2017-08-30 09:04:30,956 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
   Détail : La clé « (username)=(alex-therieur) » existe déjà.
 2017-08-30 09:04:30,959 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 11:55:07,457 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 11:55:07,462 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-30 12:31:27,224 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-30 12:31:27,228 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-08-31 15:13:30,055 ERROR main org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERREUR: la valeur d'une clé dupliquée rompt la contrainte unique « login_username_key »
+  Détail : La clé « (username)=(alex-therieur) » existe déjà.
+2017-08-31 15:13:30,058 ERROR main org.hibernate.internal.ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
